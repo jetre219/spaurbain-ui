@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Button, Text} from 'react-native';
+import {View, Button, Text, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
+import ViewContainer from "../components/ViewContainer"
+import StatusBarBackground from '../components/StatusBarBackground'
 export class LoginScreen extends React.Component {
     constructor(props) {
         super(props);
@@ -11,14 +12,22 @@ export class LoginScreen extends React.Component {
 
     render() {
         return (
-            <View>
-                <Button title="Increment" onPress={() => this.props.increment(this.props.size + 1)} />
-                <Text>{JSON.stringify(this.props.size)}</Text>
-            </View>
+            <ViewContainer>
+            <StatusBarBackground style={{backgroundColor:"mistyrose"}} />
+            <Button title="Increment" onPress={() => this.props.increment(this.props.size + 1)} />
+            <Text>{JSON.stringify(this.props.size)}</Text>
+            </ViewContainer>
         )
     }
 }
-
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor:"blue",
+        flex:1,
+        justifyContent:"center",
+        alignItems:"center"
+    }
+});
 LoginScreen.propTypes = {
     increment: PropTypes.func.isRequired,
     size: PropTypes.number.isRequired
