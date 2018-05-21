@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Button, Text} from 'react-native';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Promotions from 'components/promotions';
 
 export class LoginScreen extends React.Component {
     constructor(props) {
@@ -12,8 +13,6 @@ export class LoginScreen extends React.Component {
     render() {
         return (
             <View>
-                <Button title="Increment" onPress={() => this.props.increment(this.props.size + 1)} />
-                <Text>{JSON.stringify(this.props.size)}</Text>
             </View>
         )
     }
