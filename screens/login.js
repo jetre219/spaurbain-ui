@@ -13,9 +13,9 @@ export class LoginScreen extends React.Component {
     render() {
         return (
             <ViewContainer>
-            <StatusBarBackground style={{backgroundColor:"mistyrose"}} />
-            <Button title="Increment" onPress={() => this.props.increment(this.props.size + 1)} />
-            <Text>{JSON.stringify(this.props.size)}</Text>
+                <StatusBarBackground style={{backgroundColor:"mistyrose"}} />
+                <Button title="Increment" onPress={() => this.props.increment(this.props.size + 1)} />
+                <Text>{JSON.stringify(this.props.size)}</Text>
             </ViewContainer>
         )
     }
